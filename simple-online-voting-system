@@ -1,0 +1,43 @@
+print(" ONLINE VOTING SYSTEM ")
+candidates = {
+    "1": "Candidate A",
+    "2": "Candidate B",
+    "3": "Candidate C"
+}
+votes = {
+    "Candidate A": 0,
+    "Candidate B": 0,
+    "Candidate C": 0
+}
+print("\nCandidates:")
+for number, name in candidates.items():
+    print(number + ".", name)
+choice = input("\nEnter your vote: ")
+if choice in candidates:
+    selected_candidate = candidates[choice]
+    votes[selected_candidate] += 1
+    print("\nVote recorded successfully!")
+    print("You voted for:", selected_candidate)
+else:
+    print("\nInvalid choice!")
+print("\n===== VOTING RESULTS =====")
+for candidate, vote_count in votes.items():
+    print(candidate, ":", vote_count, "vote(s)")
+
+OUTPUT:
+ ONLINE VOTING SYSTEM 
+
+Candidates:
+1. Candidate A
+2. Candidate B
+3. Candidate C
+
+Enter your vote: 2
+
+Vote recorded successfully!
+You voted for: Candidate B
+
+===== VOTING RESULTS =====
+Candidate A : 0 vote(s)
+Candidate B : 1 vote(s)
+Candidate C : 0 vote(s)
